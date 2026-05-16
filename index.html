@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Out Post</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <button class="nav-logo" onclick="go('home')">The Out Post</button>
+    <div class="nav-links">
+      <button id="n-home"    onclick="go('home')"    class="nav-link active">HOME</button>
+      <button id="n-archive" onclick="go('archive')" class="nav-link">ARCHIVE</button>
+      <button id="n-events"  onclick="go('events')"  class="nav-link">EVENTS</button>
+      <button id="n-intern"  onclick="go('intern')"  class="nav-link">INTERNSHIPS</button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HOME ═══════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- Continuous scroll carousel -->
+    <div class="carousel-wrap">
+      <div id="strip" class="carousel-strip"></div>
+    </div>
+
+    <!-- Title -->
+    <div class="title-block">
+      <h1 class="site-title">The Out Post</h1>
+    </div>
+
+    <!-- Mission -->
+    <section class="section">
+      <div class="section-grid">
+        <div class="section-label">Our Mission</div>
+        <div>
+          <p>The Out Post Gallery exists to amplify LGBTQ+ artistic voices — those that have been silenced, marginalized, or simply never given a room of their own. We are especially committed to uplifting amateur and emerging artists, designers, and photographers whose perspectives have yet to find a platform.</p>
+          <p>Each month, we open our walls to a new theme, inviting local artists to respond, react, and reimagine. Our rotating model means the gallery is never static — because identity itself refuses to be pinned down. Every voice and every perspective matters. True representation only happens when everyone is in the room.</p>
+          <p><em>The Out Post is a space for all — for the queer community and for allies. Everyone is welcome here.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Theme -->
+    <section class="section">
+      <div class="section-grid">
+        <div>
+          <div class="section-label">Current Theme</div>
+          <div class="section-sublabel">Submissions open</div>
+        </div>
+        <div>
+          <div class="theme-name">Tender Machines</div>
+          <p class="theme-brief">How do queer people relate to technology — as tool, as refuge, as surveillance, as community? Submit work exploring the intimacy and friction between LGBTQ+ lives and digital or mechanical systems.</p>
+          <div class="theme-meta">
+            <div class="meta-item"><div class="meta-label">DEADLINE</div><div class="meta-value">July 15, 2025</div></div>
+            <div class="meta-item"><div class="meta-label">MEDIA</div><div class="meta-value">All media welcome</div></div>
+            <div class="meta-item"><div class="meta-label">LIMIT</div><div class="meta-value">Up to 5 works</div></div>
+            <div class="meta-item"><div class="meta-label">ADMISSION</div><div class="meta-value">Free</div></div>
+          </div>
+          <button class="btn-pink">SUBMIT YOUR WORK →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- This Month's Events -->
+    <section class="section">
+      <div class="section-grid">
+        <div>
+          <div class="section-label">This Month</div>
+          <div class="section-sublabel">June 2025</div>
+        </div>
+        <div>
+          <div id="month-events"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">The Out Post</div>
+          <div class="footer-info">
+            hello@outloudgallery.org<br>
+            @outloudgallery<br>
+            Tue–Sun, 12–7 pm<br>
+            Gallery admission: free<br>
+            Events: RSVP by donation · $5 minimum · Limited capacity
+          </div>
+        </div>
+          <div style="text-align:right">
+          <div style="font-size:12px;color:#888;line-height:1.9;margin-bottom:.5rem;font-style:italic">A space for all.</div>
+          <div class="footer-copy">© 2025</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ═══════════ ARCHIVE ═══════════ -->
+  <div id="page-archive" class="page">
+    <div class="inner">
+      <div class="page-header">
+        <h1 class="page-title">Archive</h1>
+        <p class="page-sub">All exhibitions, organised by theme and year</p>
+      </div>
+      <div id="arch-content"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ EVENTS ═══════════ -->
+  <div id="page-events" class="page">
+
+    <!-- Smaller past-events carousel -->
+    <div class="carousel-wrap-sm">
+      <div id="events-strip" class="carousel-strip-sm"></div>
+    </div>
+
+    <div class="inner">
+      <div class="page-header">
+        <h1 class="page-title">Events</h1>
+        <p class="page-sub">
+          Talks, workshops, openings &amp; community nights<br>
+          <span class="page-sub-note">All events: RSVP by donation · $5 minimum · Limited capacity</span>
+        </p>
+      </div>
+      <div id="events-content"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ INTERNSHIPS ═══════════ -->
+  <div id="page-intern" class="page">
+    <div class="inner">
+      <div class="page-header">
+        <h1 class="page-title">Internships</h1>
+        <p class="page-sub" style="max-width:480px">Hands-on experience across curatorial, design, marketing, and archival work. Open to current students. Academic credit available.</p>
+      </div>
+      <div id="intern-content"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
